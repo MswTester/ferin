@@ -1,0 +1,21 @@
+{
+  "name": "ferin",
+  "version": "1.0.0",
+  "description": "Language framework for application buildings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MswTester/ferin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MswTester/ferin/issues"
+  },
+  "homepage": "https://github.com/MswTester/ferin#readme"
+}
