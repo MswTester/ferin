@@ -17,5 +17,25 @@
   "bugs": {
     "url": "https://github.com/MswTester/ferin/issues"
   },
-  "homepage": "https://github.com/MswTester/ferin#readme"
+  "homepage": "https://github.com/MswTester/ferin#readme",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "chokidar": "^4.0.3",
+    "commander": "^14.0.0",
+    "express": "^5.1.0",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.4",
+    "@types/ws": "^8.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.29.0",
+    "jest": "^30.0.3",
+    "typescript": "^5.8.3"
+  }
 }
