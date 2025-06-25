@@ -1,0 +1,8 @@
+# 간단한 예제
+
+comp HelloWorld(props, children):
+  ret /div
+    /h1 "Hello Ferin!"
+    /p "This is a simple example"
+
+ret HelloWorld()

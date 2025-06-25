@@ -1,0 +1,21 @@
+# 간단한 웹 예제
+
+var count: number = 0
+
+fn increment():
+  count = count + 1
+
+fn decrement():
+  count = count - 1
+
+comp Counter(props, children):
+  ret /div flex-col gap-4 p-4
+    /h1 "Ferin Counter App"
+    /div flex-row gap-2 justify-center
+      /button onClick={decrement} bg-red-500 text-white p-2 rounded "-"
+      /span text-2xl "{count}"
+      /button onClick={increment} bg-blue-500 text-white p-2 rounded "+"
+    /p "Current count: {count}"
+
+# 웹 타겟에서는 마지막에 컴포넌트를 리턴해야 함
+ret Counter()

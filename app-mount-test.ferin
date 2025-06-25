@@ -1,0 +1,4 @@
+fn test():
+  process.mount()
+
+test()

@@ -1,0 +1,7 @@
+import { Window, process } from "std/app"
+
+async fn main():
+  var window = Window()
+  await process.mount(window)
+
+main()

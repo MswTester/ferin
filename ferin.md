@@ -238,3 +238,9 @@ ferin target.ferin
 를 실행하여 electron app을 실행하거나, 웹을 호스트함.
 
 ferin build로 빌드하면 기본적으로 /dist 폴더에 타겟에 따라 앱 설치 파일, 웹 bundle 파일이 저장됨
+
+web은 파일에서 마지막으로 ret 리턴된 /Comp 컴포넌트를 기준으로 html,css,js 번들을 생성함
+파일 내에서 return 되는 컴포넌트가 없으면 컴파일 에러
+
+app은 process.mount() 메서드로 하나 이상의 window를 mount해야 실행 가능함
+파일 내에서 mount되는 window가 없으면 컴파일 에러
