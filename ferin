@@ -1,0 +1,48 @@
+Ferin Lang Prototype
+- Easy build for Web & App projects
+
+Project Structure
+/project
+  /src
+    main.ferin
+  package.json
+
+package.json 매니페스트 내에서 ferin, ferin dev, ferin build 등의 cli 커맨드로 실행
+
+타입은 기본적으로 typescript 기반으로 동작
+
+ferin --target=web|app에 따라서 electron app, web host로 실행
+dev 커맨드는 양측 hot reload 지원
+build 커맨드는 app측은 electron-builder로 설치파일 빌드, web측은 html,js,css bundle 빌드
+
+
+```ferin
+# 주석 표기
+
+var x: number = 0 # var 변수명: 타입 = 값 (타입은 선택적, 자동 추론 필요)
+# 타입은 ts 기본 string, number, boolean, null, undefined, array, object 등 사용 가능
+fn func1(arg1: number, arg2: string): # fn 함수명(인자: 인자타입):
+  ret arg1.toString() + arg2 # 들여쓰기로 스코프 구분
+
+# js/ts가 가지고 있는 타입들의 기본적 메서드는 모두 동일하게 사용 가능
+var arr: number[] = [1, 2, 3, 4, 5, 6]
+var new_arr = arr.map((v, i): v ** 2) # () -> returnValue 식의 람다 표현식은 (): return_value 로 바뀜
+fn for_loop(v, i):
+  log(v, i) # 출력로깅
+new_arr.forEach(for_loop) # 화살표 함수를 사용할 수 없기에, forEach같은 경우에는 한줄 코드가 되거나, 함수를 따로 지정해줘야함
+# 그렇기에 배열 순회가 필요하다면 for문을 사용할 것을 권장
+for (v, i) in new_arr :
+  log(v, i)
+
+while true: # js/ts 와 같이 블로킹 루프임
+  pass
+
+loop : # 논블로킹 루프를 사용하려면 loop를 써야함
+  if condition : break
+
+if cond1 && cond2 || !cond3 : # and, or, not 등의 조건 연산자는 js 기준에 따름
+  log(`success ${cond1}`) # string 포매팅도 js를 따름
+
+
+
+```
